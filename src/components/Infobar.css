@@ -1,0 +1,45 @@
+.infobar {
+  background: #fff;
+  height: 30px;
+  display: flex;
+  position: sticky;
+  top: 80px;
+  z-index: 998;
+}
+
+.infobar-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  max-width: 1500px;
+}
+
+.info-email {
+  color: #4f2479;
+  align-items: center;
+}
+.info-social-icons {
+  color: #4f2479;
+  align-items: center;
+}
+
+.info-social-icon-link {
+  color: #4f2479;
+  font-size: 24px;
+}
+
+i.fab.fa-linkedin {
+  padding-left: 20px;
+}
+
+i.fab.fa-facebook-f {
+  padding-left: 20px;
+}
+
+i.fab.fa-instagram {
+  padding-left: 20px;
+}
