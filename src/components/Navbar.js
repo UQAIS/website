@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import logo from "../images/logo.png";
-import { Button } from "./Button";
+import { Button } from "./essentials/Button";
 import { Link } from "react-router-dom";
-import Dropdown from './Dropdown';
+import Dropdown from "./essentials/Dropdown";
+import Logo from "../images/logo.png";
 import "./Navbar.css";
 
 function Navbar() {
@@ -46,11 +46,48 @@ function Navbar() {
   return (
     <>
       <nav className="navbar">
+        <div className="navbar-logo-small">
+          <Link to="/" onClick={closeMobileMenu}>
+            <img src={Logo} alt="No Logo" height="50px" />
+          </Link>
+        </div>
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            <img className="nav-uqais" src={logo} alt="Logo" />
             UQAIS
           </Link>
+
+          <a
+            href="https://www.facebook.com/uqaisstudentclub"
+            className="nav-links-social"
+          >
+            <i className="fab fa-facebook-square" />
+          </a>
+
+          <a
+            href="https://www.instagram.com/uq_ais/"
+            className="nav-links-social"
+          >
+            <i className="fab fa-instagram" />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/company/ais-uq-studentchapter/"
+            className="nav-links-social"
+          >
+            <i className="fab fa-linkedin" />
+          </a>
+
+          <a
+            href="tel:uqaisstudentchapter@gmail.com"
+            className="nav-links-social"
+          >
+            <i className="far fa-envelope" />
+          </a>
+
+          <a href="https://github.com/UQAIS" className="nav-links-social">
+            <i className="fab fa-github-square" />
+          </a>
+
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
@@ -70,15 +107,18 @@ function Navbar() {
               </Link>
             </li>
 
-            <li className="nav-item"
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}>
+            <li
+              className="nav-item"
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}
+            >
               <Link
                 to="/about_us"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
-                About Us <i className='fas fa-caret-down' />
+                About Us
+                <i className="fas fa-caret-down" />
               </Link>
               {dropdown && <Dropdown />}
             </li>
@@ -97,7 +137,6 @@ function Navbar() {
             <Button buttonStyle="btn--outline">Become a Member</Button>
           )}
         </div>
-
       </nav>
     </>
   );

@@ -1,11 +1,7 @@
 import React from "react";
 import "./Footer.css";
-import { Button } from "./Button";
+import { Button } from "./essentials/Button";
 import { Link } from "react-router-dom";
-import logo from "../images/logo.png";
-import fb from "../images/fb.png";
-import linkedin from "../images/linkedin.png";
-import insta from "../images/insta.png";
 
 function Footer() {
   return (
@@ -26,7 +22,7 @@ function Footer() {
           </form>
         </div>
       </section>
-      <div class="footer-links">
+      <div className="footer-links">
         <div className="footer-link-wrapper">
           <div className="footer-link-items">
             <h2>About Us</h2>
@@ -42,7 +38,7 @@ function Footer() {
           </div>
         </div>
         <div className="footer-link-wrapper">
-          <div class="footer-link-items">
+          <div className="footer-link-items">
             <h2>Events</h2>
             <Link to="/">Upcoming Events </Link>
             <Link to="/">Past Events</Link>
@@ -53,41 +49,15 @@ function Footer() {
             <h2>Social Media</h2>
             <a href="https://www.facebook.com/uqaisstudentclub">Facebook</a>
             <a href="https://www.instagram.com/uq_ais/">Instagram</a>
-            <a href="https://www.linkedin.com/company/ais-uq-studentchapter/">LinkedIn</a>
+            <a href="https://www.linkedin.com/company/ais-uq-studentchapter/">
+              LinkedIn
+            </a>
           </div>
         </div>
       </div>
       <section className="social-media">
         <div className="social-media-wrap">
-          <div className="footer-logo">
-            <Link to="/" className="social-logo">
-              <img className="nav-uqais" src={logo} alt="Logo" />
-              UQAIS
-            </Link>
-          </div>
           <small className="website-rights">UQAIS © 2021</small>
-          <div className="social-icons">
-            <a
-              classname="social-icon-link facebook"
-              href="https://www.facebook.com/uqaisstudentclub"
-            >
-              <img  className='media-icon' src={fb} alt="FB" />
-            </a>
-
-            <a
-              href="https://www.instagram.com/uq_ais/"
-              classname="social-icon-link instagram"
-            >
-              <img  className='media-icon' src={insta} alt="Instagram" />
-            </a>
-
-            <a
-              href="https://www.linkedin.com/company/ais-uq-studentchapter/"
-              classname="social-icon-link twitter"
-            >
-              <img  className='media-icon' src={linkedin} alt="LinkedIn" />
-            </a>
-          </div>
         </div>
       </section>
     </div>

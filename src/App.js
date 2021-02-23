@@ -1,8 +1,7 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import Infobar from "./components/Infobar";
 import "./App.css";
-import Home from "./components/pages/Home";
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import About_Us from "./components/pages/About_Us";
 import Events from "./components/pages/Events";
@@ -11,13 +10,14 @@ import Team from "./components/pages/Team";
 import Contact from "./components/pages/Contact";
 import Terms from "./components/pages/Terms";
 import Membership from "./components/pages/Membership";
+import Home from "./components/pages/Home";
+
 
 function App() {
   return (
     <>
       <Router>
         <Navbar />
-        <Infobar />
 
         <Switch>
           <Route path="/" exact component={Home} />
@@ -29,6 +29,8 @@ function App() {
           <Route path="/events" component={Events} />
           <Route path="/membership" component={Membership} />
         </Switch>
+
+
       </Router>
     </>
   );

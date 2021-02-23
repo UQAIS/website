@@ -1,5 +1,5 @@
 .navbar {
-  background: #4f2479;
+  background: #4d247a;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -15,27 +15,27 @@
   justify-content: center;
   align-items: center;
   height: 80px;
-  max-width: 1500px;
+  max-width: 100%;
+  /* padding: 10px; */
 }
 
 .navbar-logo {
   color: #fff;
   justify-self: start;
-  /* margin-left: 20px; */
   cursor: pointer;
   text-decoration: none;
-  font-family: Arial;
+  font-family: Tisa Sans Pro, sans-serif;
+  font-style: normal;
+  font-weight: 100;
   font-size: 2rem;
   display: flex;
   align-items: center;
+  padding: 10px;
 }
 
-.nav-uqais {
-  height: 60px;
-  width: 60px;
-  margin-right: 0.5rem;
+.navbar-logo-small {
+  display: none;
 }
-
 
 .fa-typo3 {
   margin-right: 0.5rem;
@@ -65,11 +65,26 @@
   display: flex;
   align-items: center;
   text-decoration: none;
+  padding: 1rem 1rem;
+  height: 100%;
+}
+
+.nav-links-social {
+  color: #fff;
+  font-size: 150%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
 }
 
 .nav-links:hover {
+  border-bottom: 4px solid #fff;
+  transition: all 0.2s ease-out;
+}
+
+.nav-links-social:hover {
   border-bottom: 4px solid #fff;
   transition: all 0.2s ease-out;
 }
@@ -85,6 +100,7 @@
 .menu-icon {
   display: none;
 }
+
 
 @media screen and (max-width: 960px) {
   .NavbarItems {
@@ -118,6 +134,11 @@
     display: table;
   }
 
+  .nav-links-social {
+    font-size: 125%;
+    padding: 0.25rem;
+  }
+
   .nav-links:hover {
     background-color: #fff;
     color: #242424;
@@ -125,13 +146,16 @@
   }
 
   .navbar-logo {
-    position: absolute;
-    top: 1;
-    left: 0;
+    display: none;
   }
 
-  .nav-uqais {
-    margin-left: 20px;
+  .navbar-logo-small {
+    display: block;
+    position: absolute;
+    height: 50px;
+    left: 0;
+    padding-left: 10px;
+    
   }
 
   .menu-icon {
@@ -168,5 +192,11 @@
     background: #fff;
     color: #242424;
     transition: 250ms;
+  }
+}
+
+@media screen and (max-width: 235px) {
+  .nav-links-social {
+    display: none;
   }
 }

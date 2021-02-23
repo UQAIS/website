@@ -1,0 +1,5 @@
+  --main: #4D247A
+  --dark: #160B22
+  --white: #F1E8F9
+  --light: #BAAACB
+  --bright: #A169DC

@@ -1,5 +1,6 @@
 :root {
   --primary: #fff;
+  
 }
 
 .btn {
@@ -22,7 +23,9 @@
   color: #fff;
   padding: 8px 20px;
   border: 1px solid var(--primary);
+  box-shadow: 1px 1px #4D247A;;
   transition: all 0.3s ease-out;
+  text-shadow: 1px 1px #4D247A;
 }
 
 .btn--medium {
@@ -41,4 +44,10 @@
   background: #fff;
   color: #6e32a9;
   transition: 250ms;
+  text-shadow: 0px 0px #4D247A;
+}
+
+.btn--primary:hover {
+  background: #6e32a9;
+  color: white;
 }

@@ -1,19 +1,17 @@
-import React from "react";
+import React from 'react';
 import "./Pages.css";
+import Footer from '../Footer';
 import Cards from "../Cards";
 import HeroSection from "../HeroSection";
-import Footer from "../Footer";
-import Stats from "../Stats";
 
-function Home() {
+
+
+export default function Home() {
   return (
-    <>
-      <HeroSection />
-      <Stats />
-      <Cards />
-      <Footer />
-    </>
-  );
+  <>
+    <HeroSection />
+    <Cards />
+    <Footer />
+  </>
+  )
 }
-
-export default Home;
